@@ -9,7 +9,7 @@ export const environment = {
     authDomain: "surfshop-e611b.firebaseapp.com",
     databaseURL: "https://surfshop-e611b.firebaseio.com",
     projectId: "surfshop-e611b",
-    storageBucket: "",
+    storageBucket: "surfshop-e611b.appspot.com",
     messagingSenderId: "565567354180",
     appId: "1:565567354180:web:f531647911f089fffc9311"
   }
