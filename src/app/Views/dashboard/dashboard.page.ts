@@ -4,7 +4,6 @@ import { Subscription } from 'rxjs';
 import { ProductService } from 'src/app/shared/product.service';
 import { AuthService } from 'src/app/shared/auth.service';
 import { ToastController, Platform } from '@ionic/angular';
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.page.html',
@@ -28,9 +27,7 @@ export class DashboardPage implements OnInit {
     });
   }
 
-  ngOnInit() {
-    
-  }
+  ngOnInit() { }
 
   ngOnDestroy() { this.productsSubscription.unsubscribe(); }
 

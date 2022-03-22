@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Product } from '../interfaces/product';
 import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class ProductService {
   private productsCollection = this.myShop.collection<Product>('Products');
 
   constructor(private myShop: AngularFirestore) { }
-
   
   getProducts(){
     return this.productsCollection.snapshotChanges().pipe(

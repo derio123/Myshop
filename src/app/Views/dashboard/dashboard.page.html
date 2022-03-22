@@ -30,9 +30,9 @@
   </ion-list>
   <ion-list>
     <ion-item-sliding *ngFor="let product of products">
-      <ion-item button [routerLink]="['/details', product.id]">
+      <ion-item>
         <ion-avatar slot="start">
-          <img [src]="product.picture">
+          <img [src]="product.picture" alt="Imagem">
         </ion-avatar>
 
         <ion-label>
@@ -50,7 +50,7 @@
         <ion-item-option color="danger" (click)="deleteProduct(product.id)">
           <ion-icon slot="icon-only" name="trash"></ion-icon>
         </ion-item-option>
-        <ion-item-option color="success" (click)="see(product.id)">
+        <ion-item-option button color="success" [routerLink]="['/details', product.id]">
           <ion-icon slot="icon-only" name="eye"></ion-icon>
         </ion-item-option>
       </ion-item-options>
@@ -65,6 +65,6 @@
 </ion-content>
 <ion-footer>
   <ion-toolbar>
-    <ion-title class="ion-text-center">Saldo: {{itemsTotal}} </ion-title>
+    <ion-title class="ion-text-center">Saldo: {{ itemsTotal }} </ion-title>
   </ion-toolbar>
 </ion-footer>

@@ -7,4 +7,5 @@ export interface Product {
     price?: string;
     createdAt?: number;
     userId?: string;
+    quantity: number;
 }
