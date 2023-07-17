@@ -17,10 +17,11 @@ export class DashboardPage implements OnInit {
 
   isAndroid: boolean = false;
 
-  constructor(private myShopProduct: ProductService,
-              private toastCtrl: ToastController,
-              public platform: Platform,
-              private myShop: AuthService) {
+  constructor(
+    private myShopProduct: ProductService,
+    private toastCtrl: ToastController,
+    public platform: Platform,
+    private myShop: AuthService) {
     this.isAndroid = platform.is("android");
     this.productsSubscription = this.myShopProduct.getProducts().subscribe(data => {
       this.products = data;

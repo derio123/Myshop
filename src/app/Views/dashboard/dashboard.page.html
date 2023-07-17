@@ -9,7 +9,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content mode="ios">
+<ion-content mode="md">
   <ion-list *ngIf="!products.length">
     <ion-item *ngFor="let item of [0, 1, 2]">
       <ion-avatar slot="start">
@@ -47,7 +47,7 @@
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option color="danger" (click)="deleteProduct(product.id)">
+        <ion-item-option color="danger" (click)="deleteProduct(product)">
           <ion-icon slot="icon-only" name="trash"></ion-icon>
         </ion-item-option>
         <ion-item-option button color="success" [routerLink]="['/details', product.id]">

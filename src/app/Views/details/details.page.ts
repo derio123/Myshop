@@ -13,7 +13,9 @@ import { Subscription } from 'rxjs';
 })
 export class DetailsPage implements OnInit {
   private productId: string = null;
-  public product: Product = {};
+  private product: Product = {
+    quantity: 0
+  };
   private loading: any;
   private productSubscription: Subscription;
 

@@ -1,14 +1,14 @@
 <ion-header>
   <ion-toolbar mode="ios">
     <ion-title>Detalhes</ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
+    <ion-thumbnail>
+      <img alt="Silhouette of mountains" [src]="product.picture" />
+    </ion-thumbnail>
     <ion-item>
       <ion-label position="floating" class="ion-text-wrap">
         Nome
@@ -33,9 +33,18 @@
       </ion-label>
       <ion-input type="text" [(ngModel)]="product.price"></ion-input>
     </ion-item>
-    <ion-button (click)="save()" shape="round" expand="block">
+    <ion-button (click)="save()" shape="round">
       <ion-icon slot="icon-only" name="checkmark">
       </ion-icon>
     </ion-button>
   </ion-list>
+
+  <ion-fab class="item" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-buttons>
+        <ion-back-button color="light" defaultHref="/dashboard" title="Ir à tela principal" routerDirection="auto">
+        </ion-back-button>
+      </ion-buttons>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
