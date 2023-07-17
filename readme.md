@@ -21,6 +21,7 @@ como também na redução da foto de perfil.
 
  - Precisa instalar o nodejs lts 10.16:
     baixe nodejs: https://nodejs.org/en/
+    baixe yarn: `npm i -g yarn`
 
  - Logo após ter instalado, digite no terminal:
     `npm i` ou `yarn`
