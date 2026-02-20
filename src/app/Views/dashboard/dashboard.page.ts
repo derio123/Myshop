@@ -23,12 +23,20 @@ export class DashboardPage implements OnInit {
     public platform: Platform,
     private myShop: AuthService) {
     this.isAndroid = platform.is("android");
+    this.loadItems();
+  }
+
+  ngOnInit() { }
+
+  ionViewWillEnter() {
+    this.loadItems(); // recarrega sempre que entra na página
+  }
+
+  loadItems() {
     this.productsSubscription = this.myShopProduct.getProducts().subscribe(data => {
       this.products = data;
     });
   }
-
-  ngOnInit() { }
 
   ngOnDestroy() { this.productsSubscription.unsubscribe(); }
 

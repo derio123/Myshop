@@ -47,7 +47,7 @@
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option color="danger" (click)="deleteProduct(product)">
+        <ion-item-option color="danger" (click)="deleteProduct(product.id)">
           <ion-icon slot="icon-only" name="trash"></ion-icon>
         </ion-item-option>
         <ion-item-option button color="success" [routerLink]="['/details', product.id]">
