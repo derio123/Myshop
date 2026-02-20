@@ -66,7 +66,6 @@ export class DetailsPage implements OnInit {
       try {
         await this.myShopProduct.addProduct(this.product);
         await this.loading.dismiss();
-
         this.navCtrl.navigateBack('dashboard');
       } catch (error) {
         this.presentToast('Erro ao tentar salvar');
