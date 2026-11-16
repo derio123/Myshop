@@ -22,6 +22,7 @@ export class DashboardPage implements OnInit {
     private toastCtrl: ToastController,
     public platform: Platform,
     private myShop: AuthService) {
+    this.productsSubscription = new Subscription();
     this.isAndroid = platform.is("android");
     this.loadItems();
   }
